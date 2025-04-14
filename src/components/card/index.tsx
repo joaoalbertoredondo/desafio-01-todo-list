@@ -1,5 +1,6 @@
 import { Text, TouchableOpacity, View } from "react-native"
-import Icon from "react-native-vector-icons/AntDesign"
+import Entypo from "react-native-vector-icons/Entypo"
+import FA from "react-native-vector-icons/FontAwesome"
 
 import { styles } from "./styles"
 
@@ -20,21 +21,25 @@ export function TaskCard({
     <View style={styles.container}>
       <TouchableOpacity style={styles.checkButton} onPress={onCheck}>
         {!isChecked ? (
-          <Text style={styles.checkButtonText}>
-            <Icon name="pluscircleo" size={18} />
+          <Text>
+            <Entypo name="circle" size={18} color={"#4EA8DE"} />
           </Text>
         ) : (
-          <Text style={styles.checkButtonText}>
-            <Icon name="checkcircleo" size={18} />
+          <Text>
+            <View style={styles.checked}>
+              <Entypo name="check" size={10} color={"#F2F2F2"} />
+            </View>
           </Text>
         )}
       </TouchableOpacity>
 
-      <Text style={styles.text}>{title}</Text>
+      <Text style={[styles.text, isChecked && styles.checkedText]}>
+        {title}
+      </Text>
 
       <TouchableOpacity style={styles.deleteButton} onPress={onRemove}>
-        <Text style={styles.deleteButtonText}>
-          <Icon name="minuscircleo" size={18} />
+        <Text>
+          <FA name="trash-o" size={18} color={"#808080"} />
         </Text>
       </TouchableOpacity>
     </View>

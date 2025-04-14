@@ -2,17 +2,28 @@ import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#0D0D0D",
+    backgroundColor: "#262626",
     alignItems: "center",
     marginTop: 12,
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 22,
-    borderRadius: 6,
+    padding: 12,
+    borderRadius: 8,
+    borderColor: "#333333",
+    borderWidth: 2,
+
+    elevation: 1,
   },
 
   text: {
-    color: "#fff",
+    color: "#F2F2F2",
+    fontSize: 14,
+  },
+
+  checkedText: {
+    color: "#808080",
+    fontSize: 14,
+    textDecorationLine: "line-through",
   },
 
   checkButton: {
@@ -20,17 +31,16 @@ export const styles = StyleSheet.create({
     borderRadius: 4,
   },
 
-  checkButtonText: {
-    color: "#fff",
-  },
-
   deleteButton: {
-    backgroundColor: "red",
     padding: 12,
     borderRadius: 4,
   },
 
-  deleteButtonText: {
-    color: "#000",
+  checked: {
+    backgroundColor: "#5E60CE",
+    borderRadius: 999,
+    padding: 4,
+    alignItems: "center",
+    justifyContent: "center",
   },
 })

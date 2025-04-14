@@ -19,6 +19,15 @@ export function Home() {
   const [completedTasks, setCompletedTasks] = useState<string[]>([])
   const [taskTitle, setTaskTitle] = useState("")
 
+  const sortedTasks = [
+    ...tasks.sort((a, b) => {
+      const aChecked = completedTasks.includes(a)
+      const bChecked = completedTasks.includes(b)
+
+      return Number(aChecked) - Number(bChecked)
+    }),
+  ]
+
   function handleAddTask() {
     if (taskTitle === "") {
       return Alert.alert("A tarefa precisa ter um título!")
@@ -94,7 +103,7 @@ export function Home() {
 
       <View style={styles.cardContainer}>
         <FlatList
-          data={tasks}
+          data={sortedTasks}
           keyExtractor={(item) => item}
           renderItem={({ item }) => (
             <TaskCard
