@@ -27,6 +27,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#262626",
     borderRadius: 6,
     paddingHorizontal: 16,
+    color: "#fff",
   },
 
   button: {
@@ -51,6 +52,7 @@ export const styles = StyleSheet.create({
   tasksHeader: {
     justifyContent: "space-between",
     flexDirection: "row",
+    marginBottom: 20,
   },
 
   taskBox: {
@@ -82,7 +84,6 @@ export const styles = StyleSheet.create({
   },
 
   empty: {
-    marginTop: 20,
     alignItems: "center",
     borderTopWidth: 1,
     borderTopColor: "#333333",
@@ -94,12 +95,17 @@ export const styles = StyleSheet.create({
   emptyText1: {
     color: "#808080",
     fontSize: 14,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
 
   emptyText2: {
     color: "#808080",
     fontSize: 14,
+  },
 
+  cardContainer: {
+    flex: 1,
+    gap: 12,
+    width: "90%",
   },
 })
